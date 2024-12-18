@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <nav>
+            <h1>Entertainment Buzz</h1>
+            <ul>
+                <li><a href="/templates/home.html">Home</a></li>
+                <li><a href="/templates/music.html">Music</a></li>
+                <li><a href="/templates/movies.html">Movies</a></li>
+                <li><a href="/templates/events.html">Events</a></li>
+                <li><a href="/templates/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-container">
+            <h1>Upcoming Events</h1>
+            <p>Don't miss out on exciting live events happening near you.</p>
+
+            <div class="events-list">
+                <div class="event">
+                    <img src="/static/images/Blinding Lights - The Weeknd.jpg" alt="Live Concert"height="400px" width="300px">
+                    <h3>Live Concert by The Weeknd</h3>
+                    <p>Date: December 15, 2024</p>
+                    <button onclick="bookEvent('the-weeknd-concert')">Book Now</button>
+                </div>
+                <div class="event">
+                    <img src="/static/images/Avatar.jpg" alt="Film Festival">
+                    <h3>2024 Film Festival</h3>
+                    <p>Date: January 10, 2024</p>
+                    <button onclick="bookEvent('film-festival')">Book Now</button>
+                </div>
+                <!-- <div class="page-container">
+                    <h1>Upcoming Events</h1>
+                    <div class="events-list">
+                        {% for event in events %}
+                        <div class="event">
+                            <img src="{{ event.image_url }}" alt="{{ event.name }}">
+                            <h3>{{ event.name }}</h3>
+                            <p>Date: {{ event.date }}</p>
+                            <button onclick="bookEvent('{{ event.id }}')">Book Now</button>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Entertainment Buzz. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

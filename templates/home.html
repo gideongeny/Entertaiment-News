@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment News - Home</title>
+
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Entertainment Buzz</h1>
+            <ul>
+                <li><a href="/templates/home.html">Home</a></li>
+                <li><a href="/templates/music.html">Music</a></li>
+                <li><a href="/templates/movies.html">Movies</a></li>
+                <li><a href="/templates/events.html">Events</a></li>
+                <li><a href="/templates/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Sliders -->
+        <section class="hero">
+            <h2>Trending Entertainment News</h2>
+            <div class="slider">
+                <div class="slide">
+                    <img src="/static/images/Avengers 5.avif" alt="Movie Release">
+                    <p>Avengers 5: First look at the cast and official trailer revealed!</p>
+                </div>
+                <div class="slide">
+                    <img src="/static/images/2024_grammys.jpg" alt="Upcoming Event">
+                    <p>Grammy Awards 2024: Nominees announced. Who will win?</p>
+                </div>
+                <div class="slide">
+                    <img src="/static/images/taylor-swift-billion-tour.webp" alt="Celebrity News">
+                    <p>Breaking: Taylor Swift's Eras Tour Documentary becomes a global phenomenon.</p>
+                    <button onclick="readMore('taylor')">Read More</button>
+                </div>
+                <div class="slide">
+                    <img src="/static/images/slide1.jpg" alt="Slider Image 1">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/slide2.jpg" alt="Slider Image 2">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/slide3.jpg" alt="Slider Image 3">
+                </div>
+            </div>
+            <script>
+                let currentSlide = 0;
+
+                document.addEventListener("DOMContentLoaded", () => {
+                    const slides = document.querySelectorAll(".slide");
+                    const totalSlides = slides.length;
+
+                    function showSlide(index) {
+                        slides.forEach((slide, i) => {
+                            slide.style.transform = `translateX(${(i - index) * 100}%)`;
+                        });
+                    }
+
+                    function autoSlide() {
+                        currentSlide = (currentSlide + 1) % totalSlides;
+                        showSlide(currentSlide);
+                    }
+
+                    setInterval(autoSlide, 5000);
+                });
+            </script>
+            <section class="articles">
+                <h2>Latest Articles</h2>
+                <div class="article-list">
+                    <!-- Article 1 -->
+                    <article>
+                        <img src="/static/images/Taylor Swift's Eras Tour.webp" alt="Taylor Swift Eras Tour">
+                        <h3>Taylor Swift's Eras Tour: December Records Shattered</h3>
+                        <p>Taylor Swift continues to dominate the charts as her Eras Tour sets records this December,
+                            becoming one of the highest-grossing tours of the year.</p>
+                        <a href="https://www.npr.org/2024/12/06/nx-s1-5217750/taylor-swifts-eras-tour-which-shattered-sales-and-attendance-records-is-about-to-end">Read More</a>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article>
+                        <img src="/static/images/Avatar 3.webp" alt="Avatar 3 Sneak Peek">
+                        <h3>Avatar 3: December Sneak Peek Drops Stunning Visuals</h3>
+                        <p>Fans get an early look at James Cameron's highly anticipated Avatar 3. The visuals released
+                            this December hint at an epic continuation of Pandora's story.</p>
+                        <a href="https://www.kennythepirate.com/2024/11/14/a-beautiful-sneak-peek-at-avatar-3/">Read More</a>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article>
+                        <img src="/static/images/Grammy Awards 2024.jpg" alt="Grammy 2024 Nominees">
+                        <h3>Grammy Awards 2024: Nominees Released</h3>
+                        <p>The Grammy Award nominees were officially announced this December, sparking debates on fan
+                            favorites and potential winners.</p>
+                        <a href="https://www.grammy.com/awards/67th-annual-grammy-awards-2024">Read More</a>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article>
+                        <img src="/static/images/Top Holiday Movies to Watch in December.webp" alt="Holiday Movies">
+                        <h3>Top Holiday Movies to Watch in December</h3>
+                        <p>Looking for the perfect movie to cozy up with this holiday season? Check out our list of
+                            December's top new and classic holiday movies.</p>
+                        <a href="https://editorial.rottentomatoes.com/guide/best-christmas-movies/">Read More</a>
+                    </article>
+                </div>
+            </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Entertainment Buzz. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

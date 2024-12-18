@@ -1,0 +1,295 @@
+/* Universal Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+a {
+    color: #f9a825;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffeb3b;
+    transition: color 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #212121, #333);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f9a825;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #f9a825;
+    color: #121212;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden; /* Hide anything outside the slider area */
+    display: flex;
+    align-items: center;
+}
+
+/* Individual Slides */
+.slide {
+    min-width: 100%; /* Each slide takes up the full width of the container */
+    transition: transform 1s ease-in-out; /* Smooth sliding animation */
+    position: relative; /* Allows positioning of text inside slides */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps images proportional */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.img-frame {
+    width: 100%;
+    max-width: 400px; /* Consistent width */
+    height: 300px;    /* Consistent height */
+    margin: 1rem auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.img-frame img {
+    width: 100%;      /* Prevent stretching */
+    height: 100%;     /* Prevent overflowing */
+    object-fit: cover; /* Maintains aspect ratio and fills frame */
+}
+
+.movie-list img,
+.upcoming img {
+    width: 100%;       /* Prevent stretching */
+    height: 300px;    /* Fixed height for uniformity */
+    object-fit: cover; /* Maintains aspect ratio and fills frame */
+}
+
+.music-list, .upcoming, .movie-list, .events-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.music-list > article, .upcoming > article, .movie-list > article, .events-list > div {
+    width: 30%; /* Adjust this based on your design preferences */
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+article {
+    margin: 20px 0;
+}
+
+.page-container {
+    padding: 20px;
+}
+
+/* Content Section */
+section {
+    padding: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f9a825;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.article {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.article img {
+    max-width: 300px; /* Consistent width */
+    height: 200px; 
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    object-fit: cover; /* Ensures uniform size for article images */
+}
+
+.article img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+.article h3 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.article p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Buttons */
+button {
+    background: #f9a825;
+    border: none;
+    color: #121212;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ffeb3b;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes popUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: 50vh; /* Adjusted for smaller screens */
+    }
+
+    .img-frame {
+        max-width: 100%; /* Full width for smaller screens */
+        height: auto;
+    }
+}
+
+/* Image Framing for Uniformity */
+.img-frame {
+    width: 100%;
+    max-width: 400px; /* Ensures consistent width */
+    height: 300px;    /* Ensures consistent height */
+    margin: 1rem auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.img-frame img {
+    width: 100%;      /* Makes sure the image takes full width */
+    height: 100%;     /* Maintains the frame height */
+    object-fit: cover; /* Keeps the aspect ratio and fills the frame */
+}
+
+/* General Image settings within articles */
+article img {
+    width: 100%;       /* Prevent stretching */
+    height: 200px;    /* Fixed height for uniformity */
+    object-fit: cover; /* Maintains aspect ratio and fills frame */
+}
+
+.event img {
+    width: 100%;       /* Prevent stretching */
+    height: 300px;    /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures uniform fitting */
+}  
+
+/* Style for app-links */
+.app-links {
+    display: flex;
+    justify-content: center; /* Align links in the center */
+    align-items: center; /* Vertically align logos */
+    gap: 20px; /* Spacing between logos */
+    margin-top: 10px;
+}
+
+.app-links img {
+    width: 30px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth animation on hover */
+}
+
+.app-links img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment News - Movies</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="scripts.js" defer></script>
+    <style>
+        .thumbnail-container {
+            position: relative;
+            display: inline-block;
+        }
+        .thumbnail {
+            width: 100%;
+            height: auto;
+        }
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Entertainment Buzz</h1>
+            <ul>
+                <li><a href="/templates/home.html">Home</a></li>
+                <li><a href="/templates/music.html">Music</a></li>
+                <li><a href="/templates/movies.html">Movies</a></li>
+                <li><a href="/templates/events.html">Events</a></li>
+                <li><a href="/templates/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Latest Movie Releases</h2>
+            <div class="movie-list">
+                <article>
+                    <a href="https://www.youtube.com/watch?v=uYPbbksJxIg" target="_blank">
+                        <div class="thumbnail-container">
+                            <img src="/static/images/Oppenheimer-poster.jpg" alt="Oppenheimer Movie Poster" class="thumbnail">
+                            <span class="play-icon">▶</span>
+                        </div>
+                    </a>
+                    <h3>Oppenheimer</h3>
+                    <p>The cinematic masterpiece directed by Christopher Nolan.</p>
+                </article>
+                <article>
+                    <a href="https://www.youtube.com/watch?v=pBk4NYhWNMM" target="_blank">
+                        <div class="thumbnail-container">
+                            <img src="/static/images/BARBIE.webp" alt="Barbie Movie Poster" class="thumbnail">
+                            <span class="play-icon">▶</span>
+                        </div>
+                    </a>
+                    <h3>Barbie</h3>
+                    <p>A feel-good movie that's breaking box-office records worldwide.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Upcoming Movies</h2>
+            <div class="upcoming">
+                <article>
+                    <a href="https://www.youtube.com/watch?v=ScjyUyIFawc" target="_blank">
+                        <div class="thumbnail-container">
+                            <img src="/static/images/Avatar.jpg" alt="Avatar: The Seed Bearer Movie Poster" class="thumbnail">
+                            <span class="play-icon">▶</span>
+                        </div>
+                    </a>
+                    <h3>Avatar: The Seed Bearer</h3>
+                    <p>Expected Release: May 20, 2025.</p>
+                </article>
+                <article>
+                    <a href="https://www.youtube.com/watch?v=Hg4h_f4Hj4k" target="_blank">
+                        <div class="thumbnail-container">
+                            <img src="/static/images/Black-Panther.jpg" alt="Black Panther 3 Movie Poster" class="thumbnail">
+                            <span class="play-icon">▶</span>
+                        </div>
+                    </a>
+                    <h3>Black Panther 3</h3>
+                    <p>Expected Release: November 2025.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Entertainment Buzz. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

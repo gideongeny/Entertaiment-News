@@ -1,0 +1,25 @@
+{
+    "news": [
+        {
+            "id": 1,
+            "title": "Taylor Swift's New Album Tops Charts",
+            "content": "Taylor Swift's latest album has broken records worldwide.",
+            "image_url": "static/images/taylor_swift.jpg",
+            "category": "music"
+        },
+        {
+            "id": 2,
+            "title": "Marvel Releases New Movie Trailer",
+            "content": "Check out the latest trailer for the upcoming Marvel blockbuster.",
+            "image_url": "static/images/marvel_trailer.jpg",
+            "category": "movies"
+        },
+        {
+            "id": 3,
+            "title": "Grammy Awards 2024 Announced",
+            "content": "The nominees for the Grammy Awards 2024 have been revealed.",
+            "image_url": "static/images/grammy_awards.jpg",
+            "category": "music"
+        }
+    ]
+}
