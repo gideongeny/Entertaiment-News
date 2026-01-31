@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Events | Paparazzi Buzz{% endblock %}
+
+{% block content %}
+<section class="section">
+    <h2 class="section-title">The Global Spotlight</h2>
+    <div class="grid">
+        {% for event in events %}
+        <article class="card">
+            <div class="card-image">
+                <img src="{{ event.image_url }}" alt="{{ event.name }}">
+            </div>
+            <div class="card-body">
+                <div class="card-category">Exclusive Event</div>
+                <h3 class="card-title">{{ event.name }}</h3>
+                <p class="card-excerpt">Join us on {{ event.date }} for this unmatched experience.</p>
+                <div style="margin-top: 1rem;">
+                    <button class="btn-primary"
+                        style="padding: 0.6rem 1.2rem; font-size: 0.8rem; border-radius: 4px; border: none; cursor: pointer;">Request
+                        Guestlist</button>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Paparazzi Buzz{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content animate-fade-in">
+        <h1>Spotlight on the Global Stage.</h1>
+        <p>The most exclusive entertainment news, cinematic breakthroughs, and musical legends—all in one place.</p>
+        <a href="#latest" class="btn-primary">Explore Latest</a>
+    </div>
+</section>
+
+<section class="section" id="latest">
+    <h2 class="section-title">Latest Headlines</h2>
+    <div class="grid">
+        {% for article in articles %}
+        <article class="card">
+            <div class="card-image">
+                <img src="{{ article.image_url }}" alt="{{ article.title }}">
+            </div>
+            <div class="card-body">
+                <div class="card-category">Trending</div>
+                <h3 class="card-title">{{ article.title }}</h3>
+                <p class="card-excerpt">{{ article.content | truncate(100) }}</p>
+                <a href="{{ article.link }}" class="btn-text">Read More →</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
