@@ -3,11 +3,14 @@ import sqlite3
 import requests
 from functools import wraps
 
+import os
+
 app = Flask(__name__)
 app.secret_key = 'paparazzi_secret_key'
 
 # Database connection
-DATABASE = 'entertainment.db'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE = os.path.join(BASE_DIR, 'entertainment.db')
 
 # API Configurations (In a real app, these should be in environment variables)
 # NewsAPI key should be replaced with a real one
